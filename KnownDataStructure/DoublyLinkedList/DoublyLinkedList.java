@@ -48,5 +48,45 @@ public class DoublyLinkedList {
         last = last.previous;
         return temp;
     }
+     public Node deleteAfter(int key){
+        Node current = first;
+        if(current.data != key){
+            current = current.next;
+            if(current==null){
+                return null;
+            }
+        }
+        Node temp = current;
+        if(current==last){
+            last = current.previous;
+            current.previous = null;
+            last.next = null;
+        }else {
+            current.next.next.previous = current;
+            current.next = current.next.next;
+        }
+        return  temp;
+    }
+    public Node deleteKey(int key){
+        Node current = first;
+        Node temp = current;
+        if(current.data != key) {
+            current = current.next;
+            if (current == null) {
+                return null;
+            }
+        }
+        if(current==first){
+                first = first.next;
+            }else {
+                current.next.previous = current.previous;
+            }
+            if(current==last){
+                last = current.previous;
+            }else {
+                current.previous.next=current.next;
+            }
+            return temp;
+    }
 
 }
