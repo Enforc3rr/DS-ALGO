@@ -11,7 +11,7 @@ public class CodeVitaPali {
             for(int hh = 0 ; hh < 24 ; hh++){
                 for(int mm = 0 ; mm < 60 ; mm++){
                     for(int sec = 0 ; sec < 60 ;sec++){
-                        s = s + n + hh + mm + sec;
+                        s = "" + n + hh + mm + sec;
                         c = c + paliCheck(s);
                     }
                 }
