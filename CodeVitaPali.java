@@ -21,7 +21,7 @@ public class CodeVitaPali {
     }
     public static int paliCheck(String s){
         String copy = "";
-        for(int i = s.length()-1 ; i >= 0 ; i++){
+        for(int i = s.length()-1 ; i >= 0 ; i--){
             copy = copy + s.charAt(i);
         }
         int check = 0;
